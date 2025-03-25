@@ -15,6 +15,10 @@ jobs:
         with:
           repository: ${{ github.repository }}
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Git user
+        run: |
+          git config --global user.name "Basuangadi"
+          git config --global user.email "basavarajchetanabhishek@gmail.com"
 
       - name: Add Upstream Remote
         run: git remote add upstream https://github.com/piyushsachdeva/AzureDevOps-Zero-to-Hero.git
